@@ -1,0 +1,66 @@
+---
+title: "Guía rápida"
+author: "David Smz"
+date: "8/10/2020"
+output:
+  html_document:
+    df_print: paged
+  pdf_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r cars}
+summary(cars)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+
+
+## Propia chunk
+
+Vamos a calcular $\sqrt{2} - e^{-2}$
+
+```{r mi primer chunk}
+sqrt(2) - exp(-2)
+```
+
+### Las opciones del chink de r son:
+#### echo: True por defecto
+  es para mostrar o no el codigo fuente
+  
+#### eval: True por defecto
+  es para evaluar el codigo
+  
+#### message: False por defecto
+  es para mostrar todos los mensajes de salidas por instruccion
+
+
+```{r Cuadrado magico, message=TRUE}
+library(magic)
+magic(5)
+```
+
+
+## Mostrar resultados de chunk en una sola linea
+- En $\LaTeX$ $\sqrt{2}$:
+- En `R`: haciendo `r sqrt(2)`
+- La frase completa: $\sqrt{2} =$ `r sqrt(2)`
+
+

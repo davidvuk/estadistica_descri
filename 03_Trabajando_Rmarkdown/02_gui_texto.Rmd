@@ -1,0 +1,58 @@
+---
+title: "02_guia_texto"
+author: "David Smz"
+date: "9/10/2020"
+output: html_document
+---
+
+# Titulo 1
+
+## Titulo 2
+
+### Titulo 3
+
+...
+
+###### Titulo 6
+
+Este es un texto llano de `R` y podemos escribir formulas de
+$\LaTeX$
+
+Para separar un parrafo se necesita minimo un intro
+
+Para colocar en cursiva se necesita un asterisco: *Esto seria en cursiva*
+o se puede usar _un guion bajo al inicio y final_
+
+Para colocar en negrita se necesita un asterisco: **Esto seria en negrita**
+o se puede usar __doble guion bajo al inicio y final__
+
+Las matematicas ~~son un rollo~~
+
+Para conocer más cursos se puede visitar [udemy](https://www.udemy.com)
+
+## Listas
+
+- Lista desordenada
+    + sub item 1
+    + sub item 2
+
+1. lista ordenada
+    a. sub item
+    a. sub item
+1. lista ordenada
+
+
+## Tablas
+
+name        |        age        |        note
+------------|-------------------|--------------
+david       |        27         |        10
+davi        |        27         |        15
+davd        |        27         |        13
+daid        |        27         |        18
+dvid        |        27         |        20
+
+
+## Imagen
+
+![](https://cdn.iconscout.com/icon/premium/png-256-thumb/machine-learning-1952618-1649632.png)
