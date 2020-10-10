@@ -1,0 +1,25 @@
+---
+title: "Funciones"
+author: "David Smz"
+date: "9/10/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Binomio de Newton
+
+$$(a + b)^n = \sum_{k=0}^n {n \choose k} a^{n-k} \cdot b^k$$
+
+```{r}
+binomioNewton = function(a, b, n) {
+  b = cumsum(choose(n, (0:n)) * a^(n - (0:n)) * b^(0:n))
+  r = b[n+1]
+  r
+}
+
+binomioNewton(1,3, 5)
+```
+

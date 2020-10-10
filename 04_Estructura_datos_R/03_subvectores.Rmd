@@ -1,0 +1,92 @@
+---
+title: "Tratamiento de datos en R"
+author: "David Smz"
+date: "9/10/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Sub vectores
+
+```{r}
+v = 1:10
+v[5]
+v[2:4]
+```
+```{r}
+# eliminar iesimo termino v[-i]
+v[-6]
+v[-(2:4)]
+```
+```{r}
+# formas de mostrar los elementos de posiscion par
+x = 1:20
+x[seq(2,20, by = 2)]
+```
+```{r}
+# numeros mayores que 5 y menor que 15
+x[x>5 & x<15]
+```
+
+```{r}
+# posiciones de los elementos que cumple cierta condicion
+a = c(2,4,8,5,12,6,14,20,1)
+a
+which(a > 5)
+```
+```{r}
+# posiscion del maximo numero
+a
+which(a == max(a))
+a[which(a == max(a))]
+```
+
+Cambiar valores de los vectores
+```{r}
+x = 1:10
+x
+x[10] = 25
+x
+```
+
+Valores NA
+```{r}
+x = 1:5
+x
+x[8] = 8
+x
+cumsum(x)
+sum(x, na.rm = TRUE)
+```
+
+Saber que posiciones son NA
+```{r}
+is.na(x)
+which(is.na(x))
+x[which(is.na(x))]
+```
+
+Reemplazar los valores NA por la media
+```{r}
+npares = c(2, 4, 6)
+npares
+npares[7] = 14
+npares
+temp = npares
+temp[is.na(temp)] = mean(temp, na.rm = TRUE)
+temp
+```
+
+Eliminar na u omitir
+```{r}
+v = 1:6
+v
+v[10] = 10
+v
+v_clean = na.omit(v)
+v_clean
+```
+

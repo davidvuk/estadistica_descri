@@ -1,0 +1,54 @@
+---
+title: "Listas"
+author: "David Smz"
+date: "10/10/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## List
+Lista formada por diferentes objetos, no necesariamente del mismo tipo, cada
+cual con su nombre interno
+
+list() : Funcion que crea una list
+
+- Para obtener una componente en concreto usamos la instruccion
+  list$componente
+- También podemos indicar el objeto por su posicion usando dobles corchetes:
+  __list[ [i] ]__. Lo que obtendremos es una list formada por esa unica 
+  componente, no el objeto que forma esa componente.
+
+```{r}
+x = c(1,5,-2,3,7,-8,9)
+L = list(nombre = "temperaturas", datos = x, media = mean(x), sumas = cumsum(x))
+L
+```
+
+Obtener componentes de la lista
+```{r}
+L$nombre
+L$datos
+```
+
+Maneras de obtener los componentes de las listas
+```{r}
+vector.datos1 = L$datos
+vector.datos1
+# si usas un corchete obtienes otra lista
+vector.datos2 = L[[2]]
+vector.datos2
+```
+
+Obtener informacion de la lista
+
+```{r}
+# Estructura de la lista
+str(L)
+
+# nombres de las listas
+names(L)
+```
+

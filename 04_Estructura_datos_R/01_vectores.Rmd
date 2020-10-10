@@ -5,6 +5,10 @@ date: "9/10/2020"
 output: html_document
 ---
 
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
 ## Vectores
 Los vectores son agrupaciones de elementos del mismo tipo de dato, los tipos de datos en R son los siguientes:
 
@@ -64,4 +68,49 @@ Secuencia con numero de elementos y razon indicadas
 ```{r}
 seq(2, by = 3, length.out = 10)
 ```
+
+### Aplicando funciones a vectores
+```{r}
+x = 1:10
+x
+# suma de elementos
+sum(x)
+
+# multiplicacion de elementos
+prod(x)
+
+# minimo de elementos
+min(x)
+
+# maximo de elementos
+max(x)
+
+# media de los elemetos
+mean(x)
+
+# sumas acummuladas
+cumsum(x)
+
+# operaciones
+x^2
+x + 2
+sqrt(x)
+x^x
+
+# ordenar vectores
+arr = c(2,8,4,6,3,15,2,4,13)
+arr
+
+sort(arr)
+
+sort(rev(arr))
+
+rev(sort(arr))
+
+sort(arr, decreasing = TRUE)
+
+# longitud del vector
+length(arr)
+```
+
 

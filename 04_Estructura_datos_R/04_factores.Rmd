@@ -1,0 +1,73 @@
+---
+title: "Factores"
+author: "David Smz"
+date: "10/10/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Factores
+Factor es como un vector, pero con estructura interna más rica que permite
+usarlo para clasificar observaciones
+
+levels: atributo del factor. Cada elemento del factor es igual a un nivel, los
+niveles clasifican las entradas del factor, se ordena por orden alfabetico.
+
+Para definir un factor primero se define un vector y luego se transforma a un
+factor por medio de las funciones factor() o as.factor()
+
+Creacion de factor
+```{r}
+nombres = c("david", "daniel", "raquel", "caleb")
+nombres
+nombres.factor = factor(nombres)
+nombres.factor
+```
+
+```{r}
+genero = c("M", "H", "M", "M", "H", "M")
+gender.factor = factor(genero)
+gender.factor
+levels(gender.factor)
+```
+
+Agregar propiedades a los factores
+
+```{r}
+gender.fact = factor(genero, levels = c("H", "M", "I"))
+gender.fact
+```
+
+Agregar labels a las propiedades
+```{r}
+gender.fact2 = factor(genero, levels = c("H", "M", "I"), labels = c("Hombre", "Mujer", "Indefinido"))
+gender.fact2
+levels(gender.fact2)
+```
+
+```{r}
+notas = c(1,2,4,3,2,3,1,4,2,3,4,1,2)
+notas
+
+# convertir a factor
+notas.factor = factor(notas)
+notas.factor
+
+# comvertir los niveles
+levels(notas.factor) = c("suspendido", "suficiente", "aprobado", "excelente")
+notas.factor
+
+# convertir a 2 niveles
+levels(notas.factor) = c("suspendido", "aprobado", "aprobado", "aprobado")
+notas.factor
+```
+
+### Factores ordenados
+```{r}
+notas.order = ordered(notas, labels = c("Sus", "Suf", "Not", "Exc"))
+notas.order
+```
+

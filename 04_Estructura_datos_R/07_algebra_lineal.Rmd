@@ -1,0 +1,62 @@
+---
+title: "Algebra Lineal"
+author: "David Smz"
+date: "10/10/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Algebra Lineal
+```{r}
+m = matrix(1:25, nrow = 5, byrow = TRUE)
+```
+
+```{r}
+# elevar al cuadrado los elementos de una matriz
+m^2
+apply(m, MARGIN = c(1,2), FUN = function(x) {x^2})
+```
+
+```{r}
+# transpuesta de una matriz
+t(m)
+```
+
+```{r}
+# multiplicacion de matrices
+A = rbind(c(2,0,2), c(1,2,3), c(0,1,3))
+B = rbind(c(3,2,1), c(1,0,0), c(1,1,1))
+A %*% B
+```
+
+```{r}
+# determinante de una matriz
+det(A)
+```
+
+```{r}
+# rango de una matriz
+qr(m)$rank
+```
+
+Inversa de una matriz
+```{r}
+qr(m)$rank
+# inversa
+solve(A)
+```
+
+Resolver sistemas de ecuaciones
+```{r}
+M = rbind(c(10,1,1), c(1,10,1), c(1,1,10))
+solve(M, c(12,12,12))
+```
+
+Valores y vectores propios
+```{r}
+eigen(M)
+```
+
